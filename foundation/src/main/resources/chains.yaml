@@ -958,3 +958,33 @@ chain-settings:
           grpcId: 10050
           short-names: [ lisk-testnet ]
           chain-id: 0x106a
+    - id: defimetachain
+      label: DeFiMetaChain
+      type: eth
+      settings:
+        expected-block-time: 30s
+        options:
+          validate-peers: false
+        lags:
+          syncing: 40
+          lagging: 20
+        fork-choice: height
+      chains:
+        - id: mainnet
+          priority: 100
+          code: DEFIMETACHAIN
+          grpcId: 1036
+          short-names: [dmc-mainnet]
+          chain-id: 0x46a
+        - id: testnet
+          priority: 20
+          code: DEFIMETACHAIN_TESTNET
+          grpcId: 10052
+          short-names: [dmc-testnet3]
+          chain-id: 0x46b
+        - id: changi
+          priority: 10
+          code: DEFIMETACHAIN_CHANGI
+          grpcId: 10053
+          short-names: [dmc-changi]
+          chain-id: 0x46d
